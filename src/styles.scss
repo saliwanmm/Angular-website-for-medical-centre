@@ -1,1 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
+
+/* Загальні налаштування для документа */
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    // font-family: 'Playfair Display', serif;
+    // font-family: 'Cormorant Garamond', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Уніфікує розрахунок розмірів */
+    height: 100%; /* Забезпечує висоту документа 100% */
+    color: #666; /* Основний колір тексту */
+    background-color: white; /* Колір фону сторінки */
+  }
+
+  /* Контейнер */
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0 0vw;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: auto; /* Замість 100vh */
+}
+
+/* Заголовок */
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 2px;
+    background-color: #000;
+    margin: 0 1rem;
+    vertical-align: middle;
+  }
+}

@@ -1,0 +1,320 @@
+/* Основний контейнер сторінки */
+.app {
+  display: flex;
+  flex-direction: column; /* Вирівнювання елементів по вертикалі */
+  min-height: 100vh; /* Контейнер займає всю висоту вікна */
+}
+
+.up-header {
+  background-color: #ff6f61; /* Золотий фон */
+  color: #202e5e; /* Чорний колір тексту */
+  text-align: left; /* Вирівнювання тексту по центру */
+  padding: 0.5rem 2rem; /* Внутрішні відступи */
+  font-weight: bold; /* Жирний текст */
+  width: 100%; /* Повна ширина */
+}
+
+/* Основний хедер */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+  background-color: #202e5e;
+  transition: background-color 0.3s, opacity 0.3s; /* Зміна прозорості */
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  opacity: 1; /* Початкова прозорість */
+  visibility: visible; /* Початкова видимість */
+}
+
+/* Фіксований хедер при прокручуванні */
+header.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #202e5e;
+  padding: 1rem 2rem;
+  opacity: 1; /* Під час прокручування меню буде видиме */
+  visibility: visible; /* Під час прокручування меню буде видиме */
+  z-index: 1000;
+}
+
+/* Додайте відступ до основного контенту, коли хедер фіксований */
+main.fixed-header {
+  padding-top: 120px; /* Це має бути висота вашого хедера */
+}
+
+/* Зміна фону та ефекту, коли меню фіксоване */
+header.fixed {
+  background-color: #202e5e;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Ставимо меню з початковою прозорістю 0, щоб воно не було видно при початковому стані */
+header.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Додаткові стилі для плавного переходу меню */
+header {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Контейнер для меню */
+header .container2 {
+  display: flex;
+  justify-content: space-between; /* Логотип зліва, меню справа */
+  align-items: center;
+  padding: 0 2rem; /* Відступи по боках */
+  width: 100%;
+  max-width: 1200px; /* Обмежує ширину контейнера */
+  margin: 0 auto; /* Центрує контейнер */
+}
+
+.left-menu {
+  flex: 0; /* Займає доступний простір */
+  display: flex;
+  align-items: center;
+}
+
+/* Ліве меню */
+.left-menu a {
+  text-decoration: none; /* Прибрати підкреслення посилань */
+}
+
+.left-menu h1 {
+  margin: 0;
+  font-size: 1.4rem; /* Розмір тексту заголовка */
+  color: #d6d6d6; /* Колір тексту */
+}
+
+/* Праве меню */
+.right-menu {
+  display: flex;
+  font-size: 0.8rem;
+  align-items: center; /* Вирівнювання елементів по вертикалі */
+  gap: 1.5rem; /* Відстань між пунктами меню */
+}
+
+.right-menu a {
+  position: relative;
+}
+
+/* Додати position: relative для контейнера правого меню */
+.right-menu nav {
+  position: relative; /* Додано, щоб підменю позиціонувалося відносно цього контейнера */
+  display: flex;
+  gap: 1.5rem;
+}
+
+.right-menu nav a {
+  text-decoration: none;
+  color: #d6d6d6;
+  transition: color 0.3s;
+  position: relative; /* Додаємо для позиціонування підменю */
+}
+
+.right-menu nav a:hover {
+  color: rgb(238, 120, 104);
+}
+
+.right-menu nav a.active {
+  color: rgb(238, 120, 104);
+  font-weight: bold;
+}
+
+.hamburger {
+  display: none; /* Приховуємо кнопку бургер-меню на великих екранах */
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  height: 20px;
+  position: relative;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #333;
+  margin: 3px 0;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Відображення бургер-меню на мобільних */
+  }
+
+  .right-menu nav {
+    display: none;
+    flex-direction: column; /* Вертикальне меню */
+    gap: 0.5rem;
+    position: absolute;
+    top: 60px;
+    right: 2rem;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .right-menu nav.open {
+    display: flex; /* Відображення меню при відкритті */
+  }
+
+  .up-header {
+    text-align: center; /* Вирівнювання для мобільних */
+    padding: 0.5rem 1rem; /* Менші відступи */
+  }
+}
+
+/* Основний контент */
+main {
+  flex: 1; /* Контент заповнює весь доступний простір */
+  display: flex; /* Для підтримки структури */
+  flex-direction: column; /* Вертикальне вирівнювання контенту */
+  justify-content: space-between; /* Додаємо вирівнювання */
+  padding: 0rem; /* Опціонально */
+}
+
+/* Футер */
+footer {
+  background-color: #202e5e;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between; /* Лого зліва, контакти справа */
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer .logo {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Контейнер для контактів */
+footer .contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Вирівнювання по центру */
+  color: #d6d6d6;
+}
+
+/* Заголовок CONTACT US по центру */
+footer .contacts h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Контейнери для кожного контакту */
+footer .contacts .phone,
+footer .contacts .mobile,
+footer .contacts .email {
+  display: flex;
+  gap: 1rem; /* Відстань між заголовком та текстом */
+  align-items: center;
+}
+
+footer .contacts h3,
+footer .contacts p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+footer .contacts p {
+  color: rgb(238, 120, 104);
+}
+
+/* Для адаптивності на маленьких екранах */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer .logo {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Підменю */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Відступ від верхньої межі батьківського елемента */
+  left: 0;
+  background: rgb(255, 255, 255);
+  box-shadow: 0px 4px 6px #202e5e;
+  border-radius: 5px;
+  padding: 10px;
+  min-width: 200px;
+  z-index: 1000;
+  width: max-content;
+}
+
+/* Специфічне позиціонування для підменю consultations */
+.consultations-submenu {
+  left: 50%; /* Позиціонуємо по центру */
+  transform: translateX(-50%); /* Центруємо відносно батьківського елемента */
+}
+
+/* Коли підменю відкрите */
+.submenu.open {
+  display: block;
+}
+
+.submenu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #202e5e !important;
+  text-decoration: none;
+}
+
+.submenu a:hover {
+  background: rgb(238, 120, 104);
+  color: #d6d6d6;
+}
+
+.submenu a.active {
+  color: rgb(238, 120, 104) !important;
+  font-weight: bold;
+}
+
+.arrow-down {
+  margin-left: 5px;
+  font-size: 0.7rem;
+}
+
+.left-menu img {
+  max-width: 120px;
+  height: auto;
+}
+
+.container img {
+  max-width: 240px;
+  height: auto;
+}
