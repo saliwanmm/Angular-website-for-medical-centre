@@ -1,0 +1,183 @@
+$orange: rgb(238, 120, 104);
+
+.clinic-hero {
+  position: relative;
+  width: 100%;
+  height: 300px; // можна змінити за бажанням
+  background-image: url('/assets/images/clinic-services/clinic.jpg'); // заміни на свій шлях
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+  }
+
+  .orange-line {
+    width: 100%;
+    height: 3px;
+    background-color: $orange;
+    position: absolute;
+    left: 0;
+
+    &.top {
+      top: 0;
+    }
+
+    &.bottom {
+      bottom: 0;
+    }
+  }
+}
+
+.clinic-summary {
+  width: 100%;
+  // max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  // height: 100px; // можеш змінити
+  background-color: #202e5e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    color: rgb(238, 120, 104);
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+.clinic-extra {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 60px 20px;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.services-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 20px;
+  padding: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    
+    .services-image .profile-photo {
+      transform: scale(1.1);
+    }
+    
+    .card-arrow {
+      transform: translateX(5px);
+      color: $orange;
+    }
+    
+    .services-title {
+      color: $orange;
+    }
+  }
+}
+
+.services-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  
+  .profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+}
+
+.services-info {
+  padding: 25px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.services-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #202e5e;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.services-description {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.card-arrow {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  color: #ccc;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.9);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 2px;
+    background-color: #000;
+    margin: 0 1rem;
+    vertical-align: middle;
+  }
+}

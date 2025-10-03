@@ -1,1 +1,85 @@
-<p>clinic-services works!</p>
+<!-- Hero block -->
+<div class="clinic-hero">
+    <div class="orange-line top"></div>
+    <h1 class="hero-title">ПОСЛУГИ МЕДИЧНОГО ЦЕНТРУ</h1>
+    <div class="orange-line bottom"></div>
+</div>
+
+<section class="clinic-summary">
+    <div class="container">
+        <h2>Наш медичний центр надає повний спектр послуг для діагностики та лікування. Ми використовуємо сучасне
+            обладнання та найкращі методи для забезпечення якісної медичної допомоги.
+        </h2>
+    </div>
+</section>
+
+<section class="clinic-extra">
+    <div class="container">
+        <h2 class="section-title">Наші послуги</h2>
+
+        <div class="services-grid">
+            <a [routerLink]="['/services/ekg-exam']" class="services-card">
+                <div class="services-image">
+                    <img src="assets/images/ekg/ekg.jpg" alt="ekg" class="profile-photo">
+                </div>
+                <div class="services-info">
+                    <h3 class="services-title">ЕКГ обстеження</h3>
+                    <div class="services-description">ЕКГ показує роботу серця, виключає гострі процеси захворювання
+                        серця.</div>
+                </div>
+                <div class="card-arrow">→</div>
+            </a>
+
+            <a [routerLink]="['/services/ultrasound-exam']" class="services-card">
+                <div class="services-image">
+                    <img src="assets/images/ultrasound/eho.jpg" alt="eho" class="profile-photo">
+                </div>
+                <div class="services-info">
+                    <h3 class="services-title">Eхоскопічне дослідження</h3>
+                    <div class="services-description">Ехоскопію серця відображає розміри серця, виключає вроджену
+                        патологію серця, та відображає стан клапанів.</div>
+                </div>
+                <div class="card-arrow">→</div>
+            </a>
+
+            <a [routerLink]="['/services/holter-monitoring']" class="services-card">
+                <div class="services-image">
+                    <img src="assets/images/holter/holter.jpg" alt="holter" class="profile-photo">
+                </div>
+                <div class="services-info">
+                    <h3 class="services-title">Холтерівське моніторування</h3>
+                    <div class="services-description">Холтерівське моніторування добове спостереження роботи серця.
+                    </div>
+                </div>
+                <div class="card-arrow">→</div>
+            </a>
+
+            <a [routerLink]="['/services/blood-test']" class="services-card">
+                <div class="services-image">
+                    <img src="assets/images/blood-test/blood.jpg" alt="blood-test" class="profile-photo">
+                </div>
+                <div class="services-info">
+                    <h3 class="services-title">Аналіз крові</h3>
+                    <div class="services-description">Аналіз крові на глюкозу, холестерин, сечову кислоту.
+                    </div>
+                </div>
+                <div class="card-arrow">→</div>
+            </a>
+
+            <a [routerLink]="['/services/iridodiagnostic-exam']" class="services-card">
+                <div class="services-image">
+                    <img src="assets/images/irudodiahnostuka/irudodiahnostuka.jpg" alt="irudodiahnostuka"
+                        class="profile-photo">
+                </div>
+                <div class="services-info">
+                    <h3 class="services-title">Іридодіагностику</h3>
+                    <div class="services-description">Іридодіагностика - це метод, який дає правильно виставити діагноз
+                        по райдужній оболонці ока.
+                    </div>
+                </div>
+                <div class="card-arrow">→</div>
+            </a>
+        </div>
+
+    </div>
+</section>

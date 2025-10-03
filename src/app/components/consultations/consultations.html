@@ -1,1 +1,106 @@
-<p>consultations works!</p>
+<!-- Hero block -->
+<div class="consultations-hero">
+    <div class="orange-line top"></div>
+    <h1 class="hero-title">КОНСУЛЬТАЦІЇ ЛІКАРІВ</h1>
+    <div class="orange-line bottom"></div>
+</div>
+
+<section class="consultations-summary">
+    <div class="container">
+        <h2>Stay informed with expert insights, recovery tips, and the latest in physiotherapy. Follow the blog for real
+            stories, practical advice, and professional guidance on your journey to better health.
+        </h2>
+    </div>
+</section>
+
+<section class="consultations-extra">
+    <div class="container">
+        <h2 class="section-title">Наші лікарі</h2>
+
+        <div class="doctors-grid">
+            <a [routerLink]="['/consultations/cardiolog']" class="doctor-card">
+                <div class="doctor-image">
+                    <img src="assets/images/psihiatr/portrait-psi.jpeg" alt="Кардіолог" class="profile-photo">
+                </div>
+                <div class="doctor-info">
+                    <h3 class="doctor-name">Др. Марія Коваленко</h3>
+                    <p class="doctor-specialty">Кардіолог, Аритмолог</p>
+                    <div class="doctor-description">
+                        <p>Спеціалізується на діагностиці та лікуванні серцево-судинних захворювань</p>
+                    </div>
+                    <div class="card-arrow">→</div>
+                </div>
+            </a>
+
+            <a [routerLink]="['/consultations/dermatolog']" class="doctor-card">
+                <div class="doctor-image">
+                    <img src="assets/images/psihiatr/portrait-psi.jpeg" alt="Дерматолог" class="profile-photo">
+                </div>
+                <div class="doctor-info">
+                    <h3 class="doctor-name">Др. Олена Сидоренко</h3>
+                    <p class="doctor-specialty">Дерматолог, Косметолог</p>
+                    <div class="doctor-description">
+                        <p>Лікування шкірних захворювань та косметологічні процедури</p>
+                    </div>
+                    <div class="card-arrow">→</div>
+                </div>
+            </a>
+
+            <a [routerLink]="['/consultations/nevrolog']" class="doctor-card">
+                <div class="doctor-image">
+                    <img src="assets/images/psihiatr/portrait-psi.jpeg" alt="Невролог" class="profile-photo">
+                </div>
+                <div class="doctor-info">
+                    <h3 class="doctor-name">Др. Андрій Мельник</h3>
+                    <p class="doctor-specialty">Невролог, Нейрохірург</p>
+                    <div class="doctor-description">
+                        <p>Діагностика та лікування неврологічних захворювань</p>
+                    </div>
+                    <div class="card-arrow">→</div>
+                </div>
+            </a>
+
+            <a [routerLink]="['/consultations/psihiatr']" class="doctor-card">
+                <div class="doctor-image">
+                    <img src="assets/images/psihiatr/portrait-psi.jpeg" alt="Психіатр" class="profile-photo">
+                </div>
+                <div class="doctor-info">
+                    <h3 class="doctor-name">Др. Олександр Петренко</h3>
+                    <p class="doctor-specialty">Психіатр, Психотерапевт</p>
+                    <div class="doctor-description">
+                        <p>Лікування психічних розладів та психотерапевтична допомога</p>
+                    </div>
+                    <div class="card-arrow">→</div>
+                </div>
+            </a>
+
+            <a [routerLink]="['/consultations/pulmanolog']" class="doctor-card">
+                <div class="doctor-image">
+                    <img src="assets/images/psihiatr/portrait-psi.jpeg" alt="Пульманолог" class="profile-photo">
+                </div>
+                <div class="doctor-info">
+                    <h3 class="doctor-name">Др. Віктор Гриценко</h3>
+                    <p class="doctor-specialty">Пульманолог, Аллерголог</p>
+                    <div class="doctor-description">
+                        <p>Лікування захворювань органів дихання та алергічних реакцій</p>
+                    </div>
+                    <div class="card-arrow">→</div>
+                </div>
+            </a>
+
+            <a [routerLink]="['/consultations/terapevt']" class="doctor-card">
+                <div class="doctor-image">
+                    <img src="assets/images/psihiatr/portrait-psi.jpeg" alt="Терапевт" class="profile-photo">
+                </div>
+                <div class="doctor-info">
+                    <h3 class="doctor-name">Др. Наталія Шевченко</h3>
+                    <p class="doctor-specialty">Сімейний лікар, Терапевт</p>
+                    <div class="doctor-description">
+                        <p>Первинна медична допомога та загальна діагностика</p>
+                    </div>
+                    <div class="card-arrow">→</div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>

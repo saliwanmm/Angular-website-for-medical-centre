@@ -22,51 +22,51 @@
 
           <a [routerLink]="['']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
             (click)="closeMenu()">
-            <h3>HOME</h3>
+            <h3>ГОЛОВНА</h3>
           </a>
 
           <a [routerLink]="['/services']" routerLinkActive="active" (mouseenter)="servicesSubmenuOpen = true"
             (mouseleave)="closeServicesSubmenu()">
-            <h3>SERVICES<span style="color: aliceblue;" class="arrow-down">▼</span></h3>
+            <h3>ПОСЛУГИ<span style="color: aliceblue;" class="arrow-down">▼</span></h3>
           </a>
           <div class="submenu services-submenu" [class.open]="servicesSubmenuOpen"
             (mouseenter)="servicesSubmenuOpen = true" (mouseleave)="closeServicesSubmenu()">
-            <a [routerLink]="['/services/ekg-exam']" routerLinkActive="active" (click)="closeMenu()">EKG examenation</a>
-            <a [routerLink]="['/services/ultrasound-exam']" routerLinkActive="active" (click)="closeMenu()">Ultrasound
-              examenation</a>
-            <a [routerLink]="['/services/holter-monitoring']" routerLinkActive="active" (click)="closeMenu()">Holter
-              monitoring</a>
-            <a [routerLink]="['/services/blood-test']" routerLinkActive="active" (click)="closeMenu()">Blood test</a>
+            <a [routerLink]="['/services/ekg-exam']" routerLinkActive="active" (click)="closeMenu()">ЕКГ обстеження</a>
+            <a [routerLink]="['/services/ultrasound-exam']" routerLinkActive="active" (click)="closeMenu()">Ехоскопічне
+              дослідження</a>
+            <a [routerLink]="['/services/holter-monitoring']" routerLinkActive="active"
+              (click)="closeMenu()">Холтерівське моніторування</a>
+            <a [routerLink]="['/services/blood-test']" routerLinkActive="active" (click)="closeMenu()">Аналіз крові</a>
             <a [routerLink]="['/services/iridodiagnostic-exam']" routerLinkActive="active"
-              (click)="closeMenu()">Iridodiagnostic examenation</a>
+              (click)="closeMenu()">Іридодіагностика</a>
           </div>
 
           <a [routerLink]="['/consultations']" routerLinkActive="active" (mouseenter)="consultationsSubmenuOpen = true"
             (mouseleave)="closeConsultationsSubmenu()">
-            <h3>Consultations<span style="color: aliceblue;" class="arrow-down">▼</span></h3>
+            <h3>ЛІКАРІ<span style="color: aliceblue;" class="arrow-down">▼</span></h3>
           </a>
           <div class="submenu consultations-submenu" [class.open]="consultationsSubmenuOpen"
             (mouseenter)="consultationsSubmenuOpen = true" (mouseleave)="closeConsultationsSubmenu()">
-            <a [routerLink]="['/consultations/cardiolog']" routerLinkActive="active" (click)="closeMenu()">Cardiolog
-              consultation</a>
-            <a [routerLink]="['/consultations/dermatolog']" routerLinkActive="active" (click)="closeMenu()">Dermatolog
-              consultation</a>
-            <a [routerLink]="['/consultations/nevrolog']" routerLinkActive="active" (click)="closeMenu()">Nevrolog
-              consultation</a>
-            <a [routerLink]="['/consultations/psihiatr']" routerLinkActive="active" (click)="closeMenu()">Psihiatr
-              consultation</a>
-            <a [routerLink]="['/consultations/pulmanolog']" routerLinkActive="active" (click)="closeMenu()">Pulmanolog
-              consultation</a>
-            <a [routerLink]="['/consultations/terapevt']" routerLinkActive="active" (click)="closeMenu()">Terapevt
-              consultation</a>
+            <a [routerLink]="['/consultations/cardiolog']" routerLinkActive="active" (click)="closeMenu()">Консультація
+              Кардіолога</a>
+            <a [routerLink]="['/consultations/dermatolog']" routerLinkActive="active" (click)="closeMenu()">Консультація
+              Дерматолога</a>
+            <a [routerLink]="['/consultations/nevrolog']" routerLinkActive="active" (click)="closeMenu()">Консультація
+              Невролога</a>
+            <a [routerLink]="['/consultations/psihiatr']" routerLinkActive="active" (click)="closeMenu()">Консультація
+              Психіатра</a>
+            <a [routerLink]="['/consultations/pulmanolog']" routerLinkActive="active" (click)="closeMenu()">Консультація
+              Пульманолога</a>
+            <a [routerLink]="['/consultations/terapevt']" routerLinkActive="active" (click)="closeMenu()">Консультація
+              Терапевта</a>
           </div>
 
           <a [routerLink]="['/about']" routerLinkActive="active" (click)="closeMenu()">
-            <h3>ABOUT</h3>
+            <h3>ПРО КЛІНІКУ</h3>
           </a>
 
           <a [routerLink]="['/contacts']" routerLinkActive="active" (click)="closeMenu()">
-            <h3>GET IN TOUCH</h3>
+            <h3>КОНТАКТИ</h3>
           </a>
 
         </nav>
