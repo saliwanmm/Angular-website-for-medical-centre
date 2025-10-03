@@ -15,70 +15,22 @@
 
 <section class="clinic-extra">
     <div class="container">
-        <h2 class="section-title">Наші послуги</h2>
+        <h2 class="section-title" style="text-align: center;">Наші послуги</h2>
 
         <div class="services-grid">
-            <a [routerLink]="['/services/ekg-exam']" class="services-card">
-                <div class="services-image">
-                    <img src="assets/images/ekg/ekg.jpg" alt="ekg" class="profile-photo">
-                </div>
-                <div class="services-info">
-                    <h3 class="services-title">ЕКГ обстеження</h3>
-                    <div class="services-description">ЕКГ показує роботу серця, виключає гострі процеси захворювання
-                        серця.</div>
-                </div>
-                <div class="card-arrow">→</div>
-            </a>
 
-            <a [routerLink]="['/services/ultrasound-exam']" class="services-card">
-                <div class="services-image">
-                    <img src="assets/images/ultrasound/eho.jpg" alt="eho" class="profile-photo">
-                </div>
-                <div class="services-info">
-                    <h3 class="services-title">Eхоскопічне дослідження</h3>
-                    <div class="services-description">Ехоскопію серця відображає розміри серця, виключає вроджену
-                        патологію серця, та відображає стан клапанів.</div>
-                </div>
-                <div class="card-arrow">→</div>
-            </a>
-
-            <a [routerLink]="['/services/holter-monitoring']" class="services-card">
-                <div class="services-image">
-                    <img src="assets/images/holter/holter.jpg" alt="holter" class="profile-photo">
-                </div>
-                <div class="services-info">
-                    <h3 class="services-title">Холтерівське моніторування</h3>
-                    <div class="services-description">Холтерівське моніторування добове спостереження роботи серця.
+            <div *ngFor="let service of services">
+                <a [routerLink]="service.route" class="services-card">
+                    <div class="services-image">
+                        <img src={{service.image}} alt={{service.seo}} class="profile-photo">
                     </div>
-                </div>
-                <div class="card-arrow">→</div>
-            </a>
-
-            <a [routerLink]="['/services/blood-test']" class="services-card">
-                <div class="services-image">
-                    <img src="assets/images/blood-test/blood.jpg" alt="blood-test" class="profile-photo">
-                </div>
-                <div class="services-info">
-                    <h3 class="services-title">Аналіз крові</h3>
-                    <div class="services-description">Аналіз крові на глюкозу, холестерин, сечову кислоту.
+                    <div class="services-info">
+                        <h3 class="services-title">{{service.title}}</h3>
+                        <div class="services-description">{{service.description}}</div>
                     </div>
-                </div>
-                <div class="card-arrow">→</div>
-            </a>
-
-            <a [routerLink]="['/services/iridodiagnostic-exam']" class="services-card">
-                <div class="services-image">
-                    <img src="assets/images/irudodiahnostuka/irudodiahnostuka.jpg" alt="irudodiahnostuka"
-                        class="profile-photo">
-                </div>
-                <div class="services-info">
-                    <h3 class="services-title">Іридодіагностику</h3>
-                    <div class="services-description">Іридодіагностика - це метод, який дає правильно виставити діагноз
-                        по райдужній оболонці ока.
-                    </div>
-                </div>
-                <div class="card-arrow">→</div>
-            </a>
+                    <div class="card-arrow">→</div>
+                </a>
+            </div>
         </div>
 
     </div>
