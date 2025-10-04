@@ -11,6 +11,7 @@ import { ConsultNevrolog } from './components/consult-nevrolog/consult-nevrolog'
 import { ConsultPsihiatr } from './components/consult-psihiatr/consult-psihiatr';
 import { ConsultPulmanolog } from './components/consult-pulmanolog/consult-pulmanolog';
 import { ConsultTerapevt } from './components/consult-terapevt/consult-terapevt';
+import { ConsultIridolog } from './components/consult-iridolog/consult-iridolog';
 import { EkgExam } from './components/ekg-exam/ekg-exam';
 import { UltrasoundExam } from './components/ultrasound-exam/ultrasound-exam';
 import { HolterMonitoring } from './components/holter-monitoring/holter-monitoring';
@@ -32,6 +33,7 @@ export const routes: Routes = [
     { path: "consultations/psihiatr", component: ConsultPsihiatr },
     { path: "consultations/pulmanolog", component: ConsultPulmanolog },
     { path: "consultations/terapevt", component: ConsultTerapevt },
+    { path: "consultations/iridolog", component: ConsultIridolog },
     { path: "about", component: About },
     { path: "contacts", component: Contacts },
     { path: "**", redirectTo: "" },
