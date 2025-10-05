@@ -9,7 +9,7 @@ export class DoctorsService {
     name: "Лікар Леньо Любов Степанівна",
     speciality: "Кардіолог",
     description: "Діагностика та лікування серцево-судинних захворювань",
-    image: "assets/images/psihiatr/portrait-psi.jpeg",
+    image: "assets/images/cardiolog/cardio-portrait.jpeg",
     route: "/consultations/cardiolog",
     seo: "Кардіолог",
     experience: "40+ років досвіду"

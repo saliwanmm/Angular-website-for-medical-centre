@@ -169,17 +169,18 @@ $orange: rgb(238, 120, 104);
     text-align: center;
     position: relative;
 
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 4px;
-      background: $orange;
-      border-radius: 2px;
-    }
+    // &::before,
+    // &::after {
+    //   content: '';
+    //   position: absolute;
+    //   bottom: -15px;
+    //   left: 50%;
+    //   transform: translateX(-50%);
+    //   width: 80px;
+    //   height: 4px;
+    //   background: $orange;
+    //   border-radius: 2px;
+    // }
 
     @media (max-width: 768px) {
       font-size: 2rem;
