@@ -90,18 +90,6 @@ $orange: rgb(238, 120, 104);
   text-align: center;
   position: relative;
 
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: $orange;
-    border-radius: 2px;
-  }
-
   @media (max-width: 768px) {
     font-size: 2rem;
   }
@@ -143,6 +131,13 @@ $orange: rgb(238, 120, 104);
 }
 
 .values-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+
   h3 {
     font-size: 1.8rem;
     font-weight: 700;
@@ -153,11 +148,18 @@ $orange: rgb(238, 120, 104);
 
   .values-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    width: 100%;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
 
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
+      gap: 15px;
     }
   }
 
@@ -310,17 +312,6 @@ $orange: rgb(238, 120, 104);
       color: #202e5e;
       margin-bottom: 25px;
       position: relative;
-
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        left: 0;
-        width: 60px;
-        height: 3px;
-        background: $orange;
-        border-radius: 2px;
-      }
     }
 
     p {
