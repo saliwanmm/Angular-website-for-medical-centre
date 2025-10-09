@@ -15,15 +15,6 @@ export class DoctorsService {
     experience: "40+ років досвіду"
   },
     {
-    name: "Лікар Косач Лариса Іванівна",
-    speciality: "Дерматолог",
-    description: "Лікування шкірних захворювань.       ",
-    image: "assets/images/psihiatr/portrait-psi.jpeg",
-    route: "/consultations/dermatolog",
-    seo: "Дерматолог",
-    experience: "20+ років досвіду"
-  },
-    {
     name: "Лікар Макусій Любов Андріївна",
     speciality: "Невролог",
     description: "Діагностика та лікування неврологічних захворювань",
@@ -33,19 +24,10 @@ export class DoctorsService {
     experience: "40+ років досвіду"
   },
     {
-    name: "Лікар Філик Віктор",
-    speciality: "Психіатр, Психотерапевт",
-    description: "Лікування психічних розладів та психотерапевтична допомога",
-    image: "assets/images/psihiatr/portrait-psi.jpeg",
-    route: "/consultations/psihiatr",
-    seo: "Психіатр",
-    experience: "40+ років досвіду"
-  },
-    {
     name: "Лікар Вайда Ірина Іванівна",
     speciality: "Пульмонолог",
     description: "Лікування захворювань органів дихання",
-    image: "assets/images/psihiatr/portrait-psi.jpeg",
+    image: "assets/images/pulmanolog/pulma-port.jpeg",
     route: "/consultations/pulmanolog",
     seo: "Пульманолог",
     experience: "40+ років досвіду"
@@ -61,12 +43,30 @@ export class DoctorsService {
   },
   {
     name: "Лікар Леньо Любов Степанівна",
-    speciality: "Ірідолог",
-    description: "Обстеження орнанізму по райдужній оболочці ока",
-    image: "assets/images/cardiolog/cardio-portrait.jpeg",
+    speciality: "Іридолог",
+    description: "Обстеження організму по райдужній оболочці ока",
+    image: "assets/images/iridolog/irudolog-port.JPG",
     route: "/consultations/iridolog",
     seo: "Ірідолог",
     experience: "40+ років досвіду"
-  }
+  },
+  {
+    name: "Лікар Косач Лариса Іванівна",
+    speciality: "Дерматолог",
+    description: "Лікування шкірних захворювань.       ",
+    image: "assets/images/dermatolog/derma-port.jpeg",
+    route: "/consultations/dermatolog",
+    seo: "Дерматолог",
+    experience: "20+ років досвіду"
+  },
+  {
+    name: "Лікар Філик Віктор",
+    speciality: "Психіатр, Психотерапевт",
+    description: "Лікування психічних розладів та психотерапевтична допомога",
+    image: "assets/images/psihiatr/psihiatr-port.jpeg",
+    route: "/consultations/psihiatr",
+    seo: "Психіатр",
+    experience: "40+ років досвіду"
+  },
   ]
 }
